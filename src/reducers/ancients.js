@@ -3,19 +3,19 @@ import { allImages } from '../css/images';
 const images = allImages.ancients;
 
 const ancients = {
-    3: {
-        id: 3,
-        label: 'Solomon',
-        fullName: 'Solomon, Ancient of Wisdom',
-        image: images.Solomon,
-        baseLevel: 0,
-        relicBonusId: 25,
-        relicText: '+{}% Primal Hero Souls',
-        coefficients: {
-            hybrid: 1,
-            idle: 10,
-        },
-    },
+    // 3: {
+    //     id: 3,
+    //     label: 'Solomon',
+    //     fullName: 'Solomon, Ancient of Wisdom',
+    //     image: images.Solomon,
+    //     baseLevel: 0,
+    //     relicBonusId: 25,
+    //     relicText: '+{}% Primal Hero Souls',
+    //     coefficients: {
+    //         hybrid: 1,
+    //         idle: 10,
+    //     },
+    // },
     4: {
         id: 4,
         label: 'Libertas',
@@ -77,8 +77,8 @@ const ancients = {
         relicBonusId: 20,
         relicText: '+{}% Gold from Golden Clicks',
         coefficients: {
-            hybrid: 50,
-            idle: 50,
+            hybrid: 1,
+            idle: 1,
         },
     },
     11: {
@@ -179,7 +179,7 @@ const ancients = {
         image: images.Bubos,
         baseLevel: 0,
         relicBonusId: 13,
-        relicText: '-{}% Boss Life',
+        relicText: '-{} Monsters Worth of Boss Life (minimum 5 monsters)',
         coefficients: {
             hybrid: 35,
             idle: 20,
@@ -272,7 +272,7 @@ const ancients = {
         relicBonusId: 10,
         relicText: '+{} seconds to duration of Lucky Strikes',
         coefficients: {
-            hybrid: 60,
+            hybrid: 30,
             idle: 0,
         },
     },
@@ -285,7 +285,7 @@ const ancients = {
         relicBonusId: 9,
         relicText: '+{} seconds to duration of Golden Clicks',
         coefficients: {
-            hybrid: 15,
+            hybrid: 60,
             idle: 0,
         },
     },
