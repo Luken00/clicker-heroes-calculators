@@ -52,9 +52,18 @@ class BigInt {
         return this.number;
     }
 
-    // pow = (number) => {
-    //
-    // }
+    pow = (exponent) => {
+        // a pow is equal to multiply a number for itsel as many times as the exponent
+        // 2**3 === 2*2*2;
+        let e = exponent;
+        let n = this.number;
+        let r = undefined;
+        while (e > 1) {
+            e--;
+            r = this.multiply(n);
+        }
+        return r;
+    }
 
     show = (number = this.number) => {
         return `${this.round(number[0])}e+${number[1]}`;

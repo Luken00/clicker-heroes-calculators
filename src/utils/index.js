@@ -10,8 +10,12 @@ export const getDogcogPercentage = (dogcogLevel) => {
 export const getHeroCost = (hero, dogcogLevel) => {
     const { currentLevel, targetLevel, newBaseCost } = hero;
     const dogcogPercentage = getDogcogPercentage(dogcogLevel);
-    const costDiff = Math.pow(1.07, targetLevel) - Math.pow(1.07, currentLevel);
-    const multiplier = costDiff / 0.07 * (100 - dogcogPercentage) / 100;
+    const targetCost = new BigInt([1.07, 0]);
+    targetCost.pow(targetLevel);
+    const currentCost = new BigInt([1.07, 0]);
+    currentCost.pow(currentLevel);
+    targetCost.subtract(currentCost.number);
+    const multiplier = targetCost.divide([0.07 * (100 - dogcogPercentage) / 100, 0]);
     let b = new BigInt(newBaseCost);
     b.multiply([multiplier, 0]);
     return b.show();

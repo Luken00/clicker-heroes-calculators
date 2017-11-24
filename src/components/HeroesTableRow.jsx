@@ -1,6 +1,10 @@
 import { allImages as images } from '../css/images';
 import BigInt from '../utils/bigInt';
 
+const a = new BigInt([1.07, 0]);
+a.pow(100000);
+console.log();
+
 function getHeroImage(hero, heroesImages) {
     return heroesImages[hero];
 }
