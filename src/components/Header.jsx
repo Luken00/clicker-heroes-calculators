@@ -83,6 +83,12 @@ export default class Header extends React.Component {
                                 label="Mercenaries"
                             />
                             <HeaderLink
+                                active={this.props.active === 'utilities'}
+                                href="#utilities"
+                                onClick={this.onClick}
+                                label="Utilities"
+                            />
+                            <HeaderLink
                                 href="#"
                                 onClick={this.resetState}
                                 label="Reset"

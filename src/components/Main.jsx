@@ -4,6 +4,7 @@ import Ancients from '../containers/Ancients';
 import Heroes from '../containers/Heroes';
 import Mercenaries from '../containers/Mercenaries';
 import Links from '../components/Links';
+import Utilities from '../components/Utilities';
 
 const Main = ({ active }) => {
     let content = null;
@@ -20,6 +21,9 @@ const Main = ({ active }) => {
             break;
         case 'links':
             content = <Links />;
+            break;
+        case 'utilities':
+            content = <Utilities />;
             break;
         case 'relics':
         default:

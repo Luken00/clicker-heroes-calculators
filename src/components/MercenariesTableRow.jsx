@@ -1,5 +1,8 @@
 import { allImages as images } from '../css/images';
 import { rarities, mercenaryQuests } from '../constants';
+import { kumaLastZone, instaKillTime } from '../utils';
+console.log(kumaLastZone(70, 4));
+
 const { mercenaries } = images;
 
 const getTimeToDie = (s) => {
@@ -8,6 +11,8 @@ const getTimeToDie = (s) => {
     const seconds = s - (hours * 3600) - (minutes * 60);
     return `${hours} hours, ${minutes} minutes, ${seconds} seconds`;
 };
+
+console.log(getTimeToDie(instaKillTime(36000)));
 
 const getTimeToLvlup = (val) => {
     return getTimeToDie(Math.ceil(24 * 60 * 60 * (1 - val)));

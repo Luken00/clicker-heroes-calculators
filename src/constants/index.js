@@ -62,11 +62,12 @@ export const heroes = {
 export const mercenaryQuests = {
     type: {
         1: 'Recruit new Mercenary',
-        2: 'UNKNOWN',
-        3: 'UNKNOWN',
-        4: 'UNKNOWN',
-        5: 'UNKNOWN',
+        2: 'UNKNOWN2',
+        3: 'UNKNOWN3',
+        4: 'UNKNOWN4',
+        5: 'UNKNOWN5',
         6: 'Rubies',
+        7: 'ClickMas',
     },
     typeBaseReward: {
         1: 1,
@@ -75,14 +76,15 @@ export const mercenaryQuests = {
         4: 1,
         5: 1,
         6: 0.267, // Rubies
+        7: 1,
     },
     stat: {
         1: 'Extra Gold',
         2: 'Extra Hero Souls',
         3: 'Extra Rubies',
-        4: 'UNKNOWN',
+        4: 'Skills activated',
         5: 'Extra Lives',
-        6: 'UNKNOWN',
+        6: 'Recruiting Time',
     },
     rewards: {
         Common: 5,

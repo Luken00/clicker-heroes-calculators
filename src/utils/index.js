@@ -175,3 +175,31 @@ export const getRelicImage = (name, type, images) => {
             return images.ooze;
     }
 };
+
+/**
+ * Calculates the new kuma effect
+ * @param  {[type]} kumaLvl [description]
+ * @param  {[type]} borbLvl [description]
+ * @return {[type]}         [description]
+ */
+export const kumaEffect = (kumaLvl, borbLvl) => {
+    const multiplier = borbLvl * 0.1;
+    // TODO the factor is reversed engineered from the game using the old formula. it might not be accurate 100%
+    const factor = -0.002685228976;
+    return 100 * (1 - Math.exp( factor * kumaLvl)) * (1 + multiplier);
+};
+
+/**
+ * returns the zone at which current kuma + borb starts giving 3 monsters per zone
+ * @param  {[type]} kumaLvl [description]
+ * @param  {[type]} borbLvl [description]
+ * @return {[type]}         [description]
+ */
+export const kumaLastZone = (kumaLvl, borbLvl) => {
+    const kumaFx = Math.floor(kumaEffect(kumaLvl, borbLvl));
+    return (kumaFx - 6) * 500;
+};
+
+export const instaKillTime = (zone) => {
+    return zone * 0.8;
+};
